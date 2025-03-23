@@ -48,6 +48,11 @@ header {
 Page footer rules
 ==================================================================================
 */
+footer {
+    margin-top: 3em;
+    text-align: center;
+    color: #999;
+}
 
 /* TODO Avsnitt 5.2 */
 
@@ -69,6 +74,21 @@ Main site navigation
     text-align: center;
 }
 
+.menu h2 a {
+    text-decoration: none;
+    color: #000; /* Svart som standard */
+}
+
+.menu h2 a:hover,
+.menu h2 a:focus {
+    color: #933; /* Brunröd vid muspekning och tangentfokus */
+    text-decoration: underline;
+}
+
+.menu h2 a:active {
+    color: #c00; /* Röd vid klick */
+}
+
 /*
 ==================================================================================
 Start page rules
@@ -78,11 +98,18 @@ Start page rules
 /* Regler med klassen .startpage, avsnitt 5.2, 5.3 och 5.8 */
 .startpage h1 {
     font-size: 500%; /* Stor rubrik på startsidan */
+    font-family: Georgia, serif;
+    line-height: 1.2;
+}
+
+.startpage h1::first-letter {
+    color: #00AF54;
 }
 
 .startpage .tagline {
     font-size: 120%; /* Gör sloganen lite större */
     padding: 0.5em; /* Luft runt texten inuti rutan */
+    text-align: center;
     border-bottom: 3px double #00AF54; /* Dubbelgrön linje under texten */
     border-top: 3px double #00AF54;
     margin: 1em 0; /* Marginal ovanför (1em), ingen nedanför (0) */
@@ -155,6 +182,15 @@ Adaptive design
 @media (max-width: 750px) {
     .hwrap > a {
         margin-right: 25px;
+    }
+
+    .startpage h1 {
+        font-size: 250%; /* Minska rubriken på små skärmar */
+    }
+
+    .startpage section {
+        flex: 0 0 100%;     /* Gör att varje sektion tar full bredd och staplas. */
+        margin-bottom: 1em; /* Luft mellan sektionerna. */
     }
     /* Lägg till regler enligt kapitel 15 */
 }
