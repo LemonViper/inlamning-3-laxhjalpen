@@ -30,6 +30,16 @@ Rules for reusable components
 Page header, all pages
 ==================================================================================
 */
+.hwrap {
+    display: flex;              /* Gör det till en flex-container */
+    flex-wrap: wrap;            /* Tillåt radbrytning om det behövs */
+    align-items: center;        /* Centrera vertikalt */
+    justify-content: center;    /* Centrera horisontellt */
+}
+
+.hwrap > a {
+    margin-right: 30px;         /* Luft mellan bild och rubrik */
+}
 header {
     /* text-align: center; */
 }
@@ -51,6 +61,13 @@ Main site navigation
 
 /* TODO Avsnitt 5.2, 5.4, 5.5, 5.6, 11.4.2 */
 
+.menu h2 {
+    box-shadow: inset 0 0 20px #007241;
+    border-radius: 50%;
+    padding: 0.4em;
+    background: linear-gradient(to bottom, #ffffff, #9dd1b4);
+    text-align: center;
+}
 
 /*
 ==================================================================================
@@ -59,6 +76,33 @@ Start page rules
 */
 
 /* Regler med klassen .startpage, avsnitt 5.2, 5.3 och 5.8 */
+.startpage h1 {
+    font-size: 500%; /* Stor rubrik på startsidan */
+}
+
+.startpage .tagline {
+    font-size: 120%; /* Gör sloganen lite större */
+    padding: 0.5em; /* Luft runt texten inuti rutan */
+    border-bottom: 3px double #00AF54; /* Dubbelgrön linje under texten */
+    border-top: 3px double #00AF54;
+    margin: 1em 0; /* Marginal ovanför (1em), ingen nedanför (0) */
+    flex: 0 0 100%; /* Gör att tagline tar upp en hel rad i flexbox */
+}
+/* Här börjar flexbox-layouten */
+.startpage {
+    display: flex;      /* Gör body till en flex-container */
+    flex-wrap: wrap;    /* Tillåt radbrytning vid mindre skärmar */
+    justify-content: space-between; /* Fördela utrymmet jämnt mellan element */
+}
+
+.startpage header,
+.startpage footer {
+    flex: 0 0 100%;
+}
+
+.startpage section {
+    flex: 0 0 22%;
+}
 
 /*
 ==================================================================================
