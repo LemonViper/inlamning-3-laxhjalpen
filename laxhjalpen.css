@@ -64,6 +64,22 @@ Main site navigation
 
 /* Alla regler för .menu med relaterade element */
 
+.menu {
+    margin: 1em 0;
+    padding: 0;
+}
+/* Tar bort punktlistans prickar och mellanrum mellan <li> */
+.menu li {
+    margin: 0 0 1rem;
+    list-style: none;
+}
+/* Extra luft under varje <li> och <h2> i menyn */
+/* Vi använder > för att bara styla element direkt inuti .menu */
+.menu > li,
+.menu > h2 {
+    margin: 0 0 1rem;
+}
+
 /* TODO Avsnitt 5.2, 5.4, 5.5, 5.6, 11.4.2 */
 
 .menu h2 {
