@@ -76,17 +76,17 @@ Main site navigation
 
 .menu h2 a {
     text-decoration: none;
-    color: #000; /* Svart som standard */
+    color: #000;            /* Svart som standard */
 }
 
 .menu h2 a:hover,
 .menu h2 a:focus {
-    color: #933; /* Brunröd vid muspekning och tangentfokus */
+    color: #933;            /* Brunröd vid muspekning och tangentfokus */
     text-decoration: underline;
 }
 
 .menu h2 a:active {
-    color: #c00; /* Röd vid klick */
+    color: #c00;            /* Röd vid klick */
 }
 
 /*
@@ -97,7 +97,7 @@ Start page rules
 
 /* Regler med klassen .startpage, avsnitt 5.2, 5.3 och 5.8 */
 .startpage h1 {
-    font-size: 500%; /* Stor rubrik på startsidan */
+    font-size: 500%;        /* Stor rubrik på startsidan */
     font-family: Georgia, serif;
     line-height: 1.2;
 }
@@ -107,18 +107,18 @@ Start page rules
 }
 
 .startpage .tagline {
-    font-size: 120%; /* Gör sloganen lite större */
-    padding: 0.5em; /* Luft runt texten inuti rutan */
+font-size: 120%;                            /* Gör sloganen lite större */
+    padding: 0.5em;                         /* Luft runt texten inuti rutan */
     text-align: center;
-    border-bottom: 3px double #00AF54; /* Dubbelgrön linje under texten */
+    border-bottom: 3px double #00AF54;    /* Dubbelgrön linje under texten */
     border-top: 3px double #00AF54;
-    margin: 1em 0; /* Marginal ovanför (1em), ingen nedanför (0) */
-    flex: 0 0 100%; /* Gör att tagline tar upp en hel rad i flexbox */
+    margin: 1em 0;                          /* Marginal ovanför (1em), ingen nedanför (0) */
+    flex: 0 0 100%;                         /* Gör att tagline tar upp en hel rad i flexbox */
 }
 /* Här börjar flexbox-layouten */
 .startpage {
-    display: flex;      /* Gör body till en flex-container */
-    flex-wrap: wrap;    /* Tillåt radbrytning vid mindre skärmar */
+    display: flex;                  /* Gör body till en flex-container */
+    flex-wrap: wrap;                /* Tillåt radbrytning vid mindre skärmar */
     justify-content: space-between; /* Fördela utrymmet jämnt mellan element */
 }
 
@@ -138,7 +138,21 @@ Subpages
 */
 
 /* TODO Avsnitt 11.4.1, 11.6,  */
+/* Justera logotypens storlek för undersidor */
+.subpage.logo {
+    max-width: 146px;   /* Gör logotypen smalare (mindre än på startsidan) */
+    height: 123px;      /* Anpassad höjd för att matcha bildförhållandet */
+}
 
+/* Gör rubriken på undersidor mindre än på startsidan */
+.subpage h1 {
+    font-size: 2.6rem; /* Motsvarar ungefär 42px (1rem = 16 px) */
+}
+
+/* Gör rubriken på undersidor mindre än på startsidan */
+h1 > span {
+    color: #a62f00;  /* Mörkröd färg för andra delen av rubriken */
+}
 /*
 ==================================================================================
 Tables
