@@ -154,6 +154,13 @@ Subpages
 */
 
 /* TODO Avsnitt 11.4.1, 11.6,  */
+
+/* Gör hela sidans kropp till en flex-container */
+body.subpage {
+    display: flex;      /* Aktiverar flexbox */
+    flex-wrap: wrap;    /* Tillåt att elementen radbryts vid behov */
+    justify-content: space-between; /* Skapar jämnt mellanrum mellan elementen */
+}
 /* Justera logotypens storlek för undersidor */
 .subpage.logo {
     max-width: 146px;   /* Gör logotypen smalare (mindre än på startsidan) */
